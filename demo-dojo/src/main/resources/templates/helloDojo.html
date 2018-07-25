@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" data-layout-decorator="layout/default">
+<head>
+<meta charset="UTF-8">
+<title>Hello Dojo</title>
+<style type="text/css">
+h1 {
+}
+</style>
+</head>
+<body>
+	<th:block data-layout-fragment="content">
+		<h1 id="greeting">Hello</h1>
+	</th:block>
+	<th:block data-layout-fragment="content-js">
+		<script>
+			require([
+				'dojo/dom',
+				'dojo/dom-construct'
+			], function(dom, domConstruct){
+				var greetingNode = dom.byId('greeting');
+				domConstruct.place('<em> Dojo!</em>', greetingNode);
+			});
+		</script>
+	</th:block>	
+</body>
+</html>
