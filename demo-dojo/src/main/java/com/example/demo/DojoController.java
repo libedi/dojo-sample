@@ -11,5 +11,8 @@ public class DojoController {
 	public String helloDojo(Model model) {
 		return "helloDojo";
 	}
+	
+	@GetMapping("/myModule")
+	public void myModule() {}
 
 }
